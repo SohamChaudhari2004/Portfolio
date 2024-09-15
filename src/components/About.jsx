@@ -53,12 +53,12 @@ const AboutMe = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <a
+            {/* <a
               href="contact"
               className="bg-transparent border w-full border-slate-600 text-white py-2 px-4 rounded-lg text-center hover:bg-gray-600 transition duration-300"
             >
               Contact Me
-            </a>
+            </a> */}
             
           </motion.div>
         </div>
