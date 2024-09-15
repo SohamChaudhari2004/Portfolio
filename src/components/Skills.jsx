@@ -14,7 +14,7 @@ import ReactIcon from "../assets/react.svg";
 import Node from "../assets/node.svg";
 import SQL from '../assets/sql.svg';
 import MYSQL from '../assets/mysql.svg';
-import Tailwind from '../assets/Tailwind.svg';
+import Tailwind from '../assets/tailwind.svg';
 import Numpy from '../assets/numpy.svg';
 import Pandas from '../assets/pandas.svg';
 
@@ -27,19 +27,19 @@ const Skills = () => {
   ];
 
   const SkillSection = ({ title, items }) => (
-    <div className="flex flex-col items-start w-full mb-6">
-      <p className="text-2xl font-mono flex text-blue-500 mb-2">
-        <TypingAnimation duration={100} className='text-2xl' text={`${title}:`} />
-      </p>
+    <section className="flex flex-col items-start w-full mb-6">
+      <h2 className="text-2xl font-mono text-blue-500 mb-2">
+        <TypingAnimation duration={100} className="text-2xl" text={`${title}:`} />
+      </h2>
       <div className="flex flex-wrap gap-2">
         {items.map((item, index) => (
-          <div key={index} className="flex justify-center gap-2 items-center text-xl border border-gray-500 py-2 px-3">
-            <img className={`size-8 ${item.invert ? 'invert' : ''}`} src={item.icon} alt="" />
+          <div key={index} className="flex justify-center gap-2 items-center text-xl border border-gray-500 py-2 px-3 rounded-lg">
+            <img className={`w-8 h-8 ${item.invert ? 'invert' : ''}`} src={item.icon} alt={item.name} />
             <span className="text-red-400">{item.name}</span>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 
   const skillSections = [
@@ -52,7 +52,7 @@ const Skills = () => {
       ],
     },
     {
-      title: "Developer-Tools",
+      title: "Developer Tools",
       items: [
         { name: "Git", icon: Git, invert: false },
         { name: "Github", icon: Github, invert: true },
@@ -86,14 +86,14 @@ const Skills = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-8 -mt-8">
+    <div className="container mx-auto px-4 py-8 -mt-10">
       <WordPullUp
         className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-[-0.02em] text-red-400 dark:text-white mb-8"
         words="My Skills"
       />
       <div className="flex flex-col lg:flex-row">
-        <div className="w-full lg:w-1/2 p-4 flex -mt-8 items-center justify-center invert">
-          <IconCloud className="w-full h-[400px] lg:h-[600px] " iconSlugs={slugs} />
+        <div className="w-full lg:w-1/2 p-4 flex items-center justify-center">
+          <IconCloud className="w-full h-[400px] lg:h-[600px]" iconSlugs={slugs} />
         </div>
         <div className="w-full lg:w-1/2 p-4">
           {skillSections.map((section, index) => (
