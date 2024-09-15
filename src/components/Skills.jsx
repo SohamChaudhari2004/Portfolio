@@ -12,7 +12,7 @@ import MongoDB from "../assets/mongodb.svg";
 import Express from "../assets/expressjs.svg";
 import ReactIcon from "../assets/react.svg";
 import Node from "../assets/node.svg";
-import SQL from '../assets/SQL.svg';
+import SQL from '../assets/sql.svg';
 import MYSQL from '../assets/mysql.svg';
 import Tailwind from '../assets/Tailwind.svg';
 import Numpy from '../assets/numpy.svg';
