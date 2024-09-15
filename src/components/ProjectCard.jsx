@@ -23,12 +23,12 @@ const ProjectCard = ({ title, description, githubLink, liveLink, image }) => {
       </div>
       <div className="absolute bottom-0 left-64 flex top-24 gap-3 w-full opacity-0 transition-opacity duration-300 group-hover:opacity-100">
         {githubLink && (
-          <a href={githubLink} target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-900">
+          <a href={githubLink} target="_blank"  className="text-gray-700 hover:text-gray-900">
             <img src={Github} alt="GitHub" className="w-8 h-8 bg-gray-400 rounded-full" />
           </a>
         )}
         {liveLink && (
-          <a href={liveLink} target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-900">
+          <a href={liveLink} target="_blank"  className="text-gray-700 hover:text-gray-900">
             <img src={Link} alt="Live" className="w-8 h-8 p-1 bg-gray-400 rounded-full" />
           </a>
         )}
