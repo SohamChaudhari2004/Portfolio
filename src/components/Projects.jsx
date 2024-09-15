@@ -28,7 +28,7 @@ const Projects = () => {
     {
       title: 'FilmWare ',
       description: 'A movie flashcard website using reactJs and css frameworks',
-      githubLink: 'https://github.com/username/project-one', 
+      githubLink: 'https://github.com/SohamChaudhari2004/FilmWare', 
       liveLink: '',
       image:{}
     },

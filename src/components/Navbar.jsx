@@ -36,7 +36,7 @@ function Navbar() {
         {/* Navbar for medium and large screens */}
         <nav className="hidden md:block">
           <ul className="flex space-x-4 text-gray-300 font-semibold font-mono">
-            {['Home', 'AboutMe', 'Projects', 'Skills'].map((item) => (
+            {['Home', 'AboutMe', 'Projects', 'Skills', 'Contact'].map((item) => (
               <li key={item} className="hover:bg-gray-700 rounded-full px-4 py-2 cursor-pointer">
                 <Link to={`/${item.toLowerCase() === 'aboutme' ? 'aboutme' : item.toLowerCase()}`}>
                   {item}
@@ -68,7 +68,7 @@ function Navbar() {
             </div>
             <nav className="mt-8">
               <ul className="space-y-4">
-                {['Home', 'AboutMe', 'Projects', 'Skills'].map((item) => (
+                {['Home', 'AboutMe', 'Projects', 'Skills', 'Contact'].map((item) => (
                   <li key={item} className="border border-gray-600 rounded-lg">
                     <Link 
                       to={`/${item.toLowerCase() === 'aboutme' ? 'aboutme' : item.toLowerCase()}`} 
