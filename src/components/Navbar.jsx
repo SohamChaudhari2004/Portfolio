@@ -1,49 +1,80 @@
-import React from "react";
-import GithubIcon from "../assets/github.svg";
-import LinkedIcon from '../assets/LinkedIn.svg'
-function Navbar() {
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X, Github, Linkedin } from 'lucide-react';
 
-  const githubRedirect =()=>{
-    window.open('https://github.com/SohamChaudhari2004', '_blank')
-  }
-  const linkedinRedirect =()=>{
+function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSidebar = () => setIsOpen(!isOpen);
+
+  const githubRedirect = () => {
+    window.open('https://github.com/SohamChaudhari2004', '_blank');
+  };
+
+  const linkedinRedirect = () => {
     window.open('https://www.linkedin.com/in/soham-chaudhari-5214501b2/', '_blank');
-  }
- 
+  };
 
   return (
-    <div className="flex justify-between mx-14 items-center   bg-transparent my-10">
-      <div className="invert font-bold font-mono border border-gray-500 p-2  text-2xl">
-      PORTFOLIO
+    <>
+      <div className="sticky top-0 z-50 flex justify-between items-center bg-transparent my-4 px-4 md:px-20">
+        <div className="invert font-bold font-mono border cursor-pointer border-gray-500 p-2 text-xl md:text-2xl">
+          <Link to="/home">PORTFOLIO</Link>
+        </div>
+
+        {/* Menu for small screens */}
+        <div className="md:hidden">
+          <button onClick={toggleSidebar} className="text-white">
+            <Menu size={24} />
+          </button>
+        </div>
+
+        {/* Navbar for medium and large screens */}
+        <nav className="hidden md:block">
+          <ul className="flex space-x-4 text-gray-300 font-semibold font-mono">
+            {['Home', 'AboutMe', 'Projects', 'Skills', 'Contact'].map((item) => (
+              <li key={item} className="hover:bg-gray-700 rounded-full px-4 py-2 cursor-pointer">
+                <Link to={`/${item.toLowerCase()}`}>{item}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        {/* Icons for large screens only */}
+        <div className="hidden lg:flex space-x-4">
+          <Github className="text-white cursor-pointer" size={24} onClick={githubRedirect} />
+          <Linkedin className="text-white cursor-pointer" size={24} onClick={linkedinRedirect} />
+        </div>
       </div>
 
-      <nav className="flex justify-center  items-center ">
-        <div className="w-half px-10 py-2 rounded-full border border-gray-500 ">
-          <ul className="flex text-gray-300 text-center font-semibold font-mono justify-center  ">
-            <li className="z-20 hover:bg-gray-700 rounded-full px-4 py-2 cursor-pointer">
-              Home
-            </li>
-            <li  className="z-20 hover:bg-gray-700 rounded-full px-4 py-2 cursor-pointer">About</li>
-            <li className="z-20 hover:bg-gray-700 rounded-full px-4 py-2 cursor-pointer">
-              Projects
-            </li>
-            <li className="z-20 hover:bg-gray-700 rounded-full px-4 py-2 cursor-pointer">
-              Contact
-            </li>
-            <li className="z-20 hover:bg-gray-700 rounded-full px-4 py-2 cursor-pointer">
-              Skills
-            </li>
-            <li className="z-20 hover:bg-gray-700 rounded-full px-4 py-2 cursor-pointer">
-              Contact
-            </li>
-          </ul>
+      {/* Overlay and Sidebar for small screens */}
+      {isOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 md:hidden">
+          <div className="fixed inset-y-0 right-0 w-64 bg-gray-800 p-5 transform transition-transform duration-300 ease-in-out">
+            <div className="flex justify-end">
+              <button onClick={toggleSidebar} className="text-white">
+                <X size={24} />
+              </button>
+            </div>
+            <nav className="mt-8">
+              <ul className="space-y-4">
+                {['Home', 'About', 'Projects', 'Skills', 'Contact'].map((item) => (
+                  <li key={item} className="border border-gray-600 rounded-lg">
+                    <Link to={`/${item.toLowerCase()}`} className="block px-4 py-2 text-white hover:bg-gray-700" onClick={toggleSidebar}>
+                      {item}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            <div className="mt-8 flex justify-center space-x-4 bg-slate-300">
+              <Github className="text-white cursor-pointer bg-slate-400" size={24} onClick={githubRedirect} />
+              <Linkedin className="text-white cursor-pointer bg-slate-400" size={24} onClick={linkedinRedirect} />
+            </div>
+          </div>
         </div>
-      </nav>
-      <div className="flex gap-5  z-10">
-      <img className="w-10 invert h-10 cursor-pointer" onClick={githubRedirect} src={GithubIcon} alt="alr" />
-      <img className="w-10 h-10 cursor-pointer " onClick={linkedinRedirect} src={LinkedIcon} alt="alr" />
-      </div>
-    </div>
+      )}
+    </>
   );
 }
 
