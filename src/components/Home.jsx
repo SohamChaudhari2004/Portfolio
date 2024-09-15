@@ -7,17 +7,17 @@ import ShinyButton from "./magicui/shiny-button";
 const Home = () => {
   const download = () => {
     window.open(
-      "https://drive.google.com/file/d/1HbIQLoUFcWLPlrVNcijqd65QAAsuOI30/view?usp=drive_link",
+      "https://drive.google.com/file/d/11y7EMW0O3Z-N-tE0tMd7g5j76iNT-lh6/view?usp=drive_link",
       "_blank"
     );
   };
 
   return (
-    <div className="flex flex-col  md:flex-row min-h-screen -mt-32 py-10 px-4">
+    <div className="flex flex-col md:flex-row min-h-screen py-10 px-4">
       {/* Profile Image */}
-      <div className="ml-60 flex items-center justify-center relative">
+      <div className="flex items-center justify-center relative md:ml-60 mb-8 md:mb-0">
         <motion.img
-          className="w-72 h-72  md:w-96 md:h-96 rounded-full p-8 md:p-8"
+          className="w-72 h-72 md:w-96 md:h-96 rounded-full p-4 md:p-8"
           src={profilePic}
           alt="Profile"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -25,9 +25,9 @@ const Home = () => {
           transition={{ duration: 0.8, ease: "easeIn" }}
         />
       </div>
-      
+
       {/* Text and Button */}
-      <div className="flex-1 flex flex-col items-center md:items-start justify-center md:ml-10">
+      <div className="flex-1 flex flex-col items-center md:items-start justify-center md:ml-10 text-center md:text-left">
         <motion.div
           className="flex flex-col items-center md:items-start"
           initial={{ x: "-100vw" }}
@@ -35,12 +35,12 @@ const Home = () => {
           transition={{ type: "spring", stiffness: 120 }}
         >
           <TypingAnimation
-            className="text-red-400 font-bold font-mono text-4xl md:text-7xl text-center md:text-left"
+            className="text-red-400 font-bold font-mono text-4xl md:text-7xl"
             duration={100}
             text="SOHAM CHAUDHARI"
           />
           <TypingAnimation
-            className="text-blue-200 text-3xl md:text-5xl font-mono mt-4 md:mt-10 text-center md:text-left"
+            className="text-blue-200 text-3xl md:text-5xl font-mono mt-4 md:mt-10"
             duration={100}
             text="Software Developer"
           />

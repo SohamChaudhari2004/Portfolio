@@ -64,7 +64,7 @@ const Footer = () => {
         {/* Navigation Links */}
         <div className="text-center md:text-right w-full md:w-1/2">
           <h2 className="text-xl font-semibold mb-2">Links</h2>
-          <ul className=" flex justify-center gap-2 items-center md:items-end space-y-2">
+          <ul className=" flex justify-center gap-2 items-center  space-y-2">
             <li><Link to="/about" className="text-gray-400 hover:text-gray-100">About</Link></li>
             <li><Link to="/projects" className="text-gray-400 hover:text-gray-100">Projects</Link></li>
             <li><Link to="/skills" className="text-gray-400 hover:text-gray-100">Skills</Link></li>

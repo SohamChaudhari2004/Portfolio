@@ -67,9 +67,9 @@ function Navbar() {
                 ))}
               </ul>
             </nav>
-            <div className="mt-8 flex justify-center space-x-4 bg-slate-300">
-              <Github className="text-white cursor-pointer bg-slate-400" size={24} onClick={githubRedirect} />
-              <Linkedin className="text-white cursor-pointer bg-slate-400" size={24} onClick={linkedinRedirect} />
+            <div className="mt-8 flex justify-center space-x-4 ">
+              <Github className="text-black w-20 h-20 rounded-full p-2 cursor-pointer bg-slate-400" size={24} onClick={githubRedirect} />
+              <Linkedin className="text-black w-20 h-20 rounded-full p-2 cursor-pointer bg-slate-400" size={24} onClick={linkedinRedirect} />
             </div>
           </div>
         </div>
