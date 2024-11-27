@@ -83,3 +83,9 @@ body::-webkit-scrollbar-thumb{
     @apply bg-background text-foreground;
   }
 }
+
+::selection{
+  color: rgba(0, 0, 0, 0.995);
+  background-color: rgb(148, 233, 82);
+  
+}

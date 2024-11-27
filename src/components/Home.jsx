@@ -13,7 +13,7 @@ const Home = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row min-h-screen py-10 px-4">
+    <div className="flex flex-col md:flex-row min-h-screen h-[100vh] overflow-hidden py-10 px-4">
       {/* Profile Image */}
       <div className="flex items-center justify-center relative md:ml-60 mb-8 md:mb-0">
         <motion.img
