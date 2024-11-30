@@ -21,7 +21,7 @@ const Layout = () => {
           <Outlet />
         </motion.main>
       </div>
-      <Footer className="relative overflow-scroll z-20" />
+      <Footer className="relative overflow-scroll bottom-0 z-20" />
     </>
   );
 };

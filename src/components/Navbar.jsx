@@ -1,9 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Github, Linkedin } from 'lucide-react';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Add background when scrolled more than 50 pixels
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup event listener
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const toggleSidebar = () => setIsOpen(!isOpen);
 
@@ -17,7 +37,13 @@ function Navbar() {
 
   return (
     <>
-      <div className="sticky top-0 z-50 flex justify-between items-center bg-transparent my-4 px-4 md:px-20">
+      <div 
+        className={`sticky top-0 z-50 flex justify-between items-center py-4 px-4 md:px-20 transition-all duration-300 ${
+          isScrolled 
+            ? 'bg-black/70 backdrop-blur-sm' 
+            : 'bg-transparent'
+        }`}
+      >
         <div className="invert font-bold font-mono border cursor-pointer border-gray-500 p-2 text-xl md:text-2xl">
           <Link to="/home">PORTFOLIO</Link>
         </div>
@@ -36,8 +62,11 @@ function Navbar() {
         {/* Navbar for medium and large screens */}
         <nav className="hidden md:block">
           <ul className="flex space-x-4 text-gray-300 font-semibold font-mono">
-            {['Home', 'AboutMe', 'Projects', 'Skills', 'Contact'].map((item) => (
-              <li key={item} className="hover:bg-gray-700 rounded-full px-4 py-2 cursor-pointer">
+            {['Home','Projects',,'Achievements', 'Skills', 'Contact'].map((item) => (
+              <li 
+                key={item} 
+                className="hover:bg-gray-700 rounded-full px-4 py-2 cursor-pointer"
+              >
                 <Link to={`/${item.toLowerCase() === 'aboutme' ? 'aboutme' : item.toLowerCase()}`}>
                   {item}
                 </Link>
@@ -48,8 +77,16 @@ function Navbar() {
 
         {/* Icons for large screens only */}
         <div className="hidden lg:flex space-x-4">
-          <Github className="text-white cursor-pointer" size={24} onClick={githubRedirect} />
-          <Linkedin className="text-white cursor-pointer" size={24} onClick={linkedinRedirect} />
+          <Github 
+            className="text-white cursor-pointer" 
+            size={24} 
+            onClick={githubRedirect} 
+          />
+          <Linkedin 
+            className="text-white cursor-pointer" 
+            size={24} 
+            onClick={linkedinRedirect} 
+          />
         </div>
       </div>
 
@@ -68,7 +105,7 @@ function Navbar() {
             </div>
             <nav className="mt-8">
               <ul className="space-y-4">
-                {['Home', 'AboutMe', 'Projects', 'Skills', 'Contact'].map((item) => (
+                {['Home', 'Projects', 'Skills', 'Contact','Achievements'].map((item) => (
                   <li key={item} className="border border-gray-600 rounded-lg">
                     <Link 
                       to={`/${item.toLowerCase() === 'aboutme' ? 'aboutme' : item.toLowerCase()}`} 
@@ -82,8 +119,16 @@ function Navbar() {
               </ul>
             </nav>
             <div className="mt-8 flex justify-center space-x-4">
-              <Github className="text-black w-20 h-20 rounded-full p-2 cursor-pointer bg-slate-400" size={24} onClick={githubRedirect} />
-              <Linkedin className="text-black w-20 h-20 rounded-full p-2 cursor-pointer bg-slate-400" size={24} onClick={linkedinRedirect} />
+              <Github 
+                className="text-black w-20 h-20 rounded-full p-2 cursor-pointer bg-slate-400" 
+                size={24} 
+                onClick={githubRedirect} 
+              />
+              <Linkedin 
+                className="text-black w-20 h-20 rounded-full p-2 cursor-pointer bg-slate-400" 
+                size={24} 
+                onClick={linkedinRedirect} 
+              />
             </div>
           </div>
         </div>

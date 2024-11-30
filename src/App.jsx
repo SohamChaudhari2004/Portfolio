@@ -7,6 +7,7 @@ import Home from './components/Home';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
+import Achievements from './components/Achievements';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="projects" element={<Projects />} />
           <Route path="skills" element={<Skills />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="achievements" element={<Achievements />} />
         </Route>
       </Routes>
     </Router>
@@ -27,3 +29,5 @@ const App = () => {
 }
 
 export default App;
+
+

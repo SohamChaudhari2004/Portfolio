@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import profilePic from "../assets/profile.png";
 import TypingAnimation from "./magicui/typing-animation";
 import ShinyButton from "./magicui/shiny-button";
+import AboutMe from "./About";
 
 const Home = () => {
   const download = () => {
@@ -13,7 +14,8 @@ const Home = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row min-h-screen h-[100vh] overflow-hidden py-10 px-4">
+    <div className="flex flex-col">
+    <div className="flex flex-col md:flex-row min-h-screen h-full overflow-hidden py-10 px-4">
       {/* Profile Image */}
       <div className="flex items-center justify-center relative md:ml-60 mb-8 md:mb-0">
         <motion.img
@@ -63,6 +65,8 @@ const Home = () => {
           </motion.div>
         </motion.div>
       </div>
+    </div>
+      <AboutMe/>
     </div>
   );
 };
