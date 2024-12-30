@@ -1,5 +1,5 @@
 // Projects.jsx
-import React from 'react';
+
 import ProjectCard from './ProjectCard';
 import GeminiBg from '../assets/Gemini.png';
 import ChatWithPdfbg from '../assets/ChatWithPdf.png';
