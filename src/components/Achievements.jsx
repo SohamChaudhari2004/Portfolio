@@ -9,16 +9,15 @@ const achievementsData = [
     id: 1,
     title: "Top 10 @Hack2Future",
     description:
-      "Achieved top 10 position in Hack2Future hackathon at IIIT Dharwad amongst more than 1700 participants.",
+      "Secured a top 10 position in the Hack2Future 2024 hackathon at IIIT Dharwad, competing among 1,700+ participants. Developed Vision AI, an advanced AI-powered solution for efficient video and image analysis, leveraging machine learning to enhance visual data processing. The project showcased innovation in real-time object detection, scene recognition, and automated insights.",
     backgroundImage: Hack2Futbg,
   },
-  // {
-  //   id: 2,
-  //   title: "Finalist @TechSprint",
-  //   description:
-  //     "Secured a finalist position at TechSprint 2024, competing against 2000+ participants in AI-based challenges.",
-  //   backgroundImage: Hack2Futbg,
-  // },
+  {
+    id: 2,
+    title: "2nd Position IIT Ropar @Medino'sXAdvitiya'25",
+    description: "Secured Runner Up(2nd) position at Medino'sXAdvitiya'25 2025,Hosted at IIT Ropar. The event was a online hackathon that challenged my AI/ML skills and I was able to create a symptom analyzer chatbot and a OCR based prescription reader. ",
+    backgroundImage: "",
+  },
 ];
 
 const Achievements = () => {
@@ -79,7 +78,7 @@ const Achievements = () => {
                     backgroundImage: `url(${achievementsData[currentIndex].backgroundImage})`,
                   }}
                 />
-                <div className="relative ml-20 mt-60 z-10 w-full flex items-center justify-center sm:justify-start">
+                <div className="relative ml-20 mb-20 mt-60 z-10 w-full flex items-center justify-center sm:justify-start">
                   <div className="max-w-lg bg-black/50 p-6 rounded-lg mx-4">
                     <motion.h2
                       initial={{ y: -20, opacity: 0 }}
