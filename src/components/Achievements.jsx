@@ -12,13 +12,13 @@ const achievementsData = [
       "Achieved top 10 position in Hack2Future hackathon at IIIT Dharwad amongst more than 1700 participants.",
     backgroundImage: Hack2Futbg,
   },
-  {
-    id: 2,
-    title: "Finalist @TechSprint",
-    description:
-      "Secured a finalist position at TechSprint 2024, competing against 2000+ participants in AI-based challenges.",
-    backgroundImage: Hack2Futbg,
-  },
+  // {
+  //   id: 2,
+  //   title: "Finalist @TechSprint",
+  //   description:
+  //     "Secured a finalist position at TechSprint 2024, competing against 2000+ participants in AI-based challenges.",
+  //   backgroundImage: Hack2Futbg,
+  // },
 ];
 
 const Achievements = () => {
