@@ -14,17 +14,17 @@ const Footer = () => {
     window.open('https://www.linkedin.com/in/soham-chaudhari-5214501b2/', '_blank');
   };
 
-  const notionRedirect = () => {
-    window.open('https://www.notion.so/', '_blank');
-  };
+  // const notionRedirect = () => {
+  //   window.open('https://www.notion.so/', '_blank');
+  // };
 
   const twitterRedirect = () => {
     window.open('https://twitter.com/', '_blank');
   };
 
   return (
-    <div className="bg-gray-800 text-white py-6 px-4">
-      <div className="border-b border-gray-700 mb-6"></div>
+    <div className="bg-transparent text-white py-6 px-4">
+      <div className="border-b border-gray-700  mb-6"></div>
       <footer className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         {/* Contact Information */}
         <div className="text-center md:text-left mb-6 md:mb-0 w-full md:w-1/2">
@@ -33,44 +33,41 @@ const Footer = () => {
           <p>Phone: <a href="tel:+917499787431" className="text-gray-400 hover:text-gray-300">+91 7499787431</a></p>
         </div>
 
+        
         {/* Social Media Links */}
-        <div className="flex justify-center items-center gap-4 mb-6 md:mb-0 w-full md:w-1/2">
+        <div className="flex justify-center items-center gap-6 mb-6 md:mb-0 w-full md:w-1/2">
           <img
-            className="w-8 h-8 cursor-pointer hover:scale-110 transition-transform duration-300"
+            className="w-8 h-8 invert cursor-pointer hover:scale-[175%] transition-transform ease-in-out duration-300"
             onClick={githubRedirect}
             src={GithubIcon}
             alt="GitHub"
           />
           <img
-            className="w-8 h-8 cursor-pointer hover:scale-110 transition-transform duration-300"
+            className="w-8 h-8 cursor-pointer hover:scale-[175%] transition-transform ease-in-out duration-300"
             onClick={linkedinRedirect}
             src={LinkedInIcon}
             alt="LinkedIn"
           />
           <img
-            className="w-8 h-8 cursor-pointer hover:scale-110 transition-transform duration-300"
-            onClick={notionRedirect}
-            src={Notionicon}
-            alt="Notion"
-          />
-          <img
-            className="w-8 h-8 cursor-pointer hover:scale-110 transition-transform duration-300"
+            className="w-8 h-8  cursor-pointer hover:scale-[175%] transition-transform ease-in-out duration-300"
             onClick={twitterRedirect}
             src={TwitterIcon}
             alt="Twitter"
           />
         </div>
-        
         {/* Navigation Links */}
-        <div className="text-center md:text-right w-full md:w-1/2">
+        <div className="text-center md:text-right w-full flex flex-col  md:w-1/2">
           <h2 className="text-xl font-semibold mb-2">Links</h2>
-          <ul className=" flex justify-center gap-2 items-center  space-y-2">
+          <ul className=" justify-center gap-2 items-center  space-y-2">
             <li><Link to="/about" className="text-gray-400 hover:text-gray-100">About</Link></li>
             <li><Link to="/projects" className="text-gray-400 hover:text-gray-100">Projects</Link></li>
             <li><Link to="/skills" className="text-gray-400 hover:text-gray-100">Skills</Link></li>
             <li><Link to="/contact" className="text-gray-400 hover:text-gray-100">Contact</Link></li>
           </ul>
         </div>
+        
+        
+        
       </footer>
 
       {/* Copyright Notice */}

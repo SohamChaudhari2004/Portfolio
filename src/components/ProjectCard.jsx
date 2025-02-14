@@ -4,6 +4,7 @@ import { MagicCard } from './magicui/magic-card';
 import Github from '../assets/github.svg';
 import Link from '../assets/link.png';
 
+
 const ProjectCard = ({ title, description, githubLink, liveLink, image }) => {
   return (
     <div className="w-full cursor-pointer">

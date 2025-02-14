@@ -5,6 +5,9 @@ import Particles from "./magicui/particles";
 import Footer from "./Footer";
 import { motion } from "framer-motion";
 
+import ProjectCarousel from "./ProjectCarousel";
+import { projects } from "./Projects";
+import SkillCard from "./SkillsCard";
 const Layout = () => {
   return (
     <>
@@ -20,6 +23,7 @@ const Layout = () => {
         >
           <Outlet />
         </motion.main>
+        
       </div>
       <Footer className="relative overflow-scroll bottom-0 z-20" />
     </>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Github, Linkedin } from 'lucide-react';
+import { FaGithub } from 'react-icons/fa';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -62,7 +63,7 @@ function Navbar() {
         {/* Navbar for medium and large screens */}
         <nav className="hidden md:block">
           <ul className="flex space-x-4 text-gray-300 font-semibold font-mono">
-            {['Home','Projects',,'Achievements', 'Skills', 'Contact'].map((item) => (
+            {['Home','Projects','AboutMe','Achievements', 'Skills', 'Contact'].map((item) => (
               <li 
                 key={item} 
                 className="hover:bg-gray-700 rounded-full px-4 py-2 cursor-pointer"
@@ -105,7 +106,7 @@ function Navbar() {
             </div>
             <nav className="mt-8">
               <ul className="space-y-4">
-                {['Home', 'Projects', 'Skills', 'Contact','Achievements'].map((item) => (
+                {['Home', 'Projects','AboutMe', 'Skills', 'Contact','Achievements'].map((item) => (
                   <li key={item} className="border border-gray-600 rounded-lg">
                     <Link 
                       to={`/${item.toLowerCase() === 'aboutme' ? 'aboutme' : item.toLowerCase()}`} 
@@ -118,14 +119,14 @@ function Navbar() {
                 ))}
               </ul>
             </nav>
-            <div className="mt-8 flex justify-center space-x-4">
-              <Github 
-                className="text-black w-20 h-20 rounded-full p-2 cursor-pointer bg-slate-400" 
+            <div className="mt-8 flex justify-center hover:scale-[175%] space-x-4">
+              <FaGithub 
+                className="text-black w-20 h-20 hover:scale-[175%] rounded-full p-2 cursor-pointer bg-slate-400" 
                 size={24} 
                 onClick={githubRedirect} 
               />
               <Linkedin 
-                className="text-black w-20 h-20 rounded-full p-2 cursor-pointer bg-slate-400" 
+                className="text-black w-20 h-20  rounded-full p-2 cursor-pointer bg-slate-400" 
                 size={24} 
                 onClick={linkedinRedirect} 
               />
