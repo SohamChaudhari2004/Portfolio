@@ -9,7 +9,7 @@ const Contact = () => {
     const data = Object.fromEntries(formData.entries());
 
     try {
-      const response = await fetch("http://localhost:5000/send-email", {
+      const response = await fetch("https://portfolio-backend-jtve.onrender.com/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -25,7 +25,7 @@ const Contact = () => {
         setMessage(result.error || "Failed to send message");
       }
     } catch (error) {
-      setMessage("Error sending message", error.message);
+      setMessage("Error sending message", error.me);
       
     }
   };
