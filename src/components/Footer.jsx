@@ -1,17 +1,20 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import GithubIcon from '../assets/github.svg';
-import LinkedInIcon from '../assets/LinkedIn.svg';
-import Notionicon from '../assets/notion.svg';
-import TwitterIcon from '../assets/twitter.svg';
+import React from "react";
+import { Link } from "react-router-dom";
+import GithubIcon from "../assets/github.svg";
+import LinkedInIcon from "../assets/LinkedIn.svg";
+import Notionicon from "../assets/notion.svg";
+import TwitterIcon from "../assets/twitter.svg";
 
 const Footer = () => {
   const githubRedirect = () => {
-    window.open('https://github.com/SohamChaudhari2004', '_blank');
+    window.open("https://github.com/SohamChaudhari2004", "_blank");
   };
 
   const linkedinRedirect = () => {
-    window.open('https://www.linkedin.com/in/soham-chaudhari-5214501b2/', '_blank');
+    window.open(
+      "https://www.linkedin.com/in/soham-chaudhari-5214501b2/",
+      "_blank"
+    );
   };
 
   // const notionRedirect = () => {
@@ -19,7 +22,7 @@ const Footer = () => {
   // };
 
   const twitterRedirect = () => {
-    window.open('https://twitter.com/', '_blank');
+    window.open("https://twitter.com/", "_blank");
   };
 
   return (
@@ -29,11 +32,26 @@ const Footer = () => {
         {/* Contact Information */}
         <div className="text-center md:text-left mb-6 md:mb-0 w-full md:w-1/2">
           <h2 className="text-xl font-semibold mb-2">Contact</h2>
-          <p>Email: <a href="mailto:sohamrc@gmail.com" className="text-gray-400 hover:text-gray-300">sohamrc@gmail.com</a></p>
-          <p>Phone: <a href="tel:+917499787431" className="text-gray-400 hover:text-gray-300">+91 7499787431</a></p>
+          <p>
+            Email:{" "}
+            <a
+              href="mailto:sohamrc@gmail.com"
+              className="text-gray-400 hover:text-gray-300"
+            >
+              sohamrc@gmail.com
+            </a>
+          </p>
+          <p>
+            Phone:{" "}
+            <a
+              href="tel:+917499787431"
+              className="text-gray-400 hover:text-gray-300"
+            >
+              +91 7499787431
+            </a>
+          </p>
         </div>
 
-        
         {/* Social Media Links */}
         <div className="flex justify-center items-center gap-6 mb-6 md:mb-0 w-full md:w-1/2">
           <img
@@ -59,20 +77,39 @@ const Footer = () => {
         <div className="text-center md:text-right w-full flex flex-col  md:w-1/2">
           <h2 className="text-xl font-semibold mb-2">Links</h2>
           <ul className=" justify-center gap-2 items-center  space-y-2">
-            <li><Link to="/about" className="text-gray-400 hover:text-gray-100">About</Link></li>
-            <li><Link to="/projects" className="text-gray-400 hover:text-gray-100">Projects</Link></li>
-            <li><Link to="/skills" className="text-gray-400 hover:text-gray-100">Skills</Link></li>
-            <li><Link to="/contact" className="text-gray-400 hover:text-gray-100">Contact</Link></li>
+            <li>
+              <Link to="/about" className="text-gray-400 hover:text-gray-100">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/projects"
+                className="text-gray-400 hover:text-gray-100"
+              >
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link to="/skills" className="text-gray-400 hover:text-gray-100">
+                Skills
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="text-gray-400 hover:text-gray-100">
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
-        
-        
-        
       </footer>
 
       {/* Copyright Notice */}
       <div className="text-center mt-6 text-gray-400">
-        <p>&copy; {new Date().getFullYear()} Soham Chaudhari. All rights reserved.</p>
+        <p>
+          &copy; {new Date().getFullYear()} Soham Chaudhari. All rights
+          reserved.
+        </p>
       </div>
     </div>
   );
