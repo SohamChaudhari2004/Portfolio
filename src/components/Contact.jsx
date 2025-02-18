@@ -9,7 +9,7 @@ const Contact = () => {
     const data = Object.fromEntries(formData.entries());
 
     try {
-      const response = await fetch("https://portfolio-backend-jtve.onrender.com/send-email", {
+      const response = await fetch("https://portfolio-backend-tfi6.onrender.com/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
