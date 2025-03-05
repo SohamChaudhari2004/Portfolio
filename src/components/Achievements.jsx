@@ -3,20 +3,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Hack2Futbg from "../assets/hack2fut.png";
 import WordPullUp from "./magicui/word-pull-up";
-
+import IITRoparHackBg from "../assets/IITRoparhack2nd.png"
 const achievementsData = [
   {
     id: 1,
+    title: "2nd Position IIT Ropar @Medino'sXAdvitiya'25",
+    description: "Secured Runner Up(2nd) position at Medino'sXAdvitiya'25 2025,Hosted at IIT Ropar. The event was a online hackathon that challenged my AI/ML skills and I was able to create a symptom analyzer chatbot and a OCR based prescription reader. ",
+    backgroundImage: IITRoparHackBg,
+  },
+  {
+    id: 2,
     title: "Top 10 @Hack2Future",
     description:
       "Secured a top 10 position in the Hack2Future 2024 hackathon at IIIT Dharwad, competing among 1,700+ participants. Developed Vision AI, an advanced AI-powered solution for efficient video and image analysis, leveraging machine learning to enhance visual data processing. The project showcased innovation in real-time object detection, scene recognition, and automated insights.",
     backgroundImage: Hack2Futbg,
-  },
-  {
-    id: 2,
-    title: "2nd Position IIT Ropar @Medino'sXAdvitiya'25",
-    description: "Secured Runner Up(2nd) position at Medino'sXAdvitiya'25 2025,Hosted at IIT Ropar. The event was a online hackathon that challenged my AI/ML skills and I was able to create a symptom analyzer chatbot and a OCR based prescription reader. ",
-    backgroundImage: "",
   },
 ];
 
@@ -73,7 +73,7 @@ const Achievements = () => {
                 className="absolute inset-0 flex items-center justify-center"
               >
                 <div
-                  className="absolute inset-0 bg-cover bg-center filter brightness-75"
+                  className="absolute inset-0 bg-contain bg-center bg-no-repeat filter brightness-75"
                   style={{
                     backgroundImage: `url(${achievementsData[currentIndex].backgroundImage})`,
                   }}
@@ -104,19 +104,19 @@ const Achievements = () => {
             {/* Navigation Buttons */}
             <button
               onClick={prevSlide}
-              className="absolute left-4 bg-black/50 p-2 rounded-full hover:bg-black/70"
+              className="absolute left-4 bg-black/50 p-2 rounded-full hover:bg-black/70 z-20"
             >
               <ChevronLeft className="text-white" size={32} />
             </button>
             <button
               onClick={nextSlide}
-              className="absolute right-4 bg-black/50 p-2 rounded-full hover:bg-black/70"
+              className="absolute right-4 bg-black/50 p-2 rounded-full hover:bg-black/70 z-20"
             >
               <ChevronRight className="text-white" size={32} />
             </button>
 
             {/* Pagination Dots */}
-            <div className="absolute bottom-4 flex space-x-2">
+            <div className="absolute bottom-4 flex space-x-2 z-20">
               {achievementsData.map((_, index) => (
                 <motion.div
                   key={index}
