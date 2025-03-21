@@ -12,7 +12,7 @@ import Achievements from "./Achievements";
 const Home = () => {
   const download = () => {
     window.open(
-      `https://drive.google.com/file/d/1vnMkO5sGJNH4NB3zmXkLRhQ5V5o0jjZU/view?usp=sharing`,
+      `https://drive.google.com/file/d/1w2QAL4WoB45s7TdMqsg3ZsDtGxa8JOu9/view?usp=sharing`,
       "_blank"
     );
   };
