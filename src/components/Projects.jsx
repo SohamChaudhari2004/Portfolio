@@ -24,7 +24,7 @@ import CarRenatalBg from "../assets/CarRental.png"
     title: "Cold email generator",
     description: "A generative AI project utilizing Langchain and Llama 3.1 to develop advanced language models that generate context-aware responses and automate various tasks efficiently.",
     githubLink: "https://github.com/SohamChaudhari2004/Cold_Email_Generator",
-    liveLink: "",
+    liveLink: "https://cold-email-generator-vj9l.onrender.com/",
     image: ColdEmailGeneratorbg,
     category: "ai-ml",
   },
